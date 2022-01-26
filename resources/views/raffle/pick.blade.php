@@ -29,7 +29,7 @@
                         res = "The winner is: ";
                     }
 
-                    k.forEach(key => res += '<br>' + winners[key].name + ' | Phone:' + winners[key].phone);
+                    k.forEach(key => res += '<br>' + winners[key].name + ' | Phone: ' + winners[key].phone);
                     let ele = document.getElementById('response');
                     ele.innerHTML = res;
 

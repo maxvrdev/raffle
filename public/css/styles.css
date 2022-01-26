@@ -11700,3 +11700,8 @@ body {
     border-radius: 0.25rem !important;
 }
 
+.alert button {
+    background: none;
+    border: none;
+}
+

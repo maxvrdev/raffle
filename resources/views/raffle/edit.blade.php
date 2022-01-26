@@ -13,7 +13,7 @@
 
     <main>
         <div class="container-fluid px-4">
-            <h1 class="mt-4">Create a Raffle Entry</h1>
+            <h1 class="mt-4">Edit a Raffle Entry</h1>
             <h4>To enter the raffle, please submit your:</h4>
             <ul>
                 <li>Full Name</li>
@@ -50,14 +50,14 @@
                         </div>
                         <div class="form-group">
                             <label for="name">Full Name</label>
-                            <input name="name" type="text" class="form-control @error('name') is-invalid @enderror" id="name" value="{{ $raffle->name }}" required>
+                            <input name="name" type="text" class="form-control @error('name') is-invalid @enderror" id="name" value="{{ $raffle->name }}" {{ old('name', $raffle->name) }} required>
                             @error('name')
                             <div class="invalid-feedback mt-0" style="display: block;">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone</label>
-                            <input name="phone" type="tel" class="form-control @error('phone') is-invalid @enderror" id="phone" value="{{ $raffle->phone }}"  required>
+                            <input name="phone" type="tel" class="form-control @error('phone') is-invalid @enderror" id="phone" value="{{ $raffle->phone }}" {{ old('phone', $raffle->phone) }}  required>
                             @error('phone')
                             <div class="invalid-feedback mt-0" style="display: block;">{{ $message }}</div>
                             @enderror

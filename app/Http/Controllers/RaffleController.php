@@ -73,6 +73,11 @@ class RaffleController extends Controller
     {
         $raffle_types = RaffleType::all();
 
+        $notification = array(
+            'message' => 'The Raffle for ' . $raffle->name . ' was successfully edited!',
+            'alert-type' => 'success'
+        );
+
         return view('raffle.edit', compact('raffle_types'), compact('raffle'));
     }
 

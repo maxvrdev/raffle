@@ -49,14 +49,14 @@
                         </div>
                         <div class="form-group">
                             <label for="name">Full Name</label>
-                            <input name="name" type="text" class="form-control @error('name') is-invalid @enderror" id="name" required>
+                            <input name="name" type="text" class="form-control @error('name') is-invalid @enderror" id="name" value="{{ old('name') }}" required>
                             @error('name')
                             <div class="invalid-feedback mt-0" style="display: block;">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone</label>
-                            <input name="phone" type="tel" class="form-control @error('phone') is-invalid @enderror" id="phone" required>
+                            <input name="phone" type="tel" class="form-control @error('phone') is-invalid @enderror" id="phone" {{ old('phone') }} required>
                             @error('phone')
                             <div class="invalid-feedback mt-0" style="display: block;">{{ $message }}</div>
                             @enderror
